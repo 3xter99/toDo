@@ -27,6 +27,7 @@ const render = function () {
         const btnTodoCompleted = li.querySelector('.todo-complete')
         btnTodoCompleted.addEventListener('click', function () {
             item.completed = !item.completed;
+            localStorage.setItem('todos', JSON.stringify(todoData));
             render()
         })
         const todoRemove = li.querySelector('.todo-remove');
