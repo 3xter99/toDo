@@ -55,7 +55,7 @@ todoControl.addEventListener('submit', function (event) {
     }
 })
 let showLocalStorage = function() {
-    todoData = JSON.parse(localStorage.getItem('todos'))
+    todoData = JSON.parse(localStorage.getItem('todos')) || []
     render()
 }
 showLocalStorage()
